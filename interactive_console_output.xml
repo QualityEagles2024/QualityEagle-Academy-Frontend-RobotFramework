@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-10-10T20:35:47.195669" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\kathleen\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" owner="MainLoop">
+<status status="PASS" start="2024-10-10T20:35:47.262801" elapsed="143.889838"/>
+</kw>
+<status status="PASS" start="2024-10-10T20:35:47.261890" elapsed="143.891147"/>
+</test>
+<status status="PASS" start="2024-10-10T20:35:47.198169" elapsed="143.956363"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-10T20:35:47.181787" level="WARN">Error in file 'c:\Users\kathleen\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot' on line 4: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+</errors>
+</robot>
