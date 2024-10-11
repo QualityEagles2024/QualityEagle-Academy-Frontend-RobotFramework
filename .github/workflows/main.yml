@@ -36,7 +36,11 @@ jobs:
           source venv/bin/activate  
         
       - name: Instalar dependencias
-        run:  pip install -r ./requirements.txt
+        run: |
+              source venv/bin/activate
+              pip install -r ./requirements.txt
+              pip install robotframework-seleniumlibrary==4.25.0
+
       - name: Run test
         run:  
           robot ./Specs
