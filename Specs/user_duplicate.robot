@@ -5,7 +5,7 @@ Library  Collections
 Resource  ${EXECDIR}/Page/login.robot
 Resource  ${EXECDIR}/Page/menus.robot
 Resource  ${EXECDIR}/Page/user_duplicate.robot
-Suite Setup     Open Browser    about:blank     Google Chrome    options=add_argument("disable-search-engine-choice-screen")
+Suite Setup     Open Browser  browser=headlesschrome
 Suite Teardown  Close Browser
 
 *** Variables ***

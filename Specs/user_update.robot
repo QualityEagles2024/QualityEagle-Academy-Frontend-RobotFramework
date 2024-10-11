@@ -6,7 +6,7 @@ Variables    ../Page/Mocks/user_variables.py
 Resource      ${EXECDIR}/Page/login.robot
 Resource      ${EXECDIR}/Page/menus.robot
 Resource      ${EXECDIR}/Page/user.robot
-Suite Setup     Open Browser    about:blank     Google Chrome
+Suite Setup     Open Browser  browser=headlesschrome
 Suite Teardown  Close Browser
 
 *** Variables ***
