@@ -39,11 +39,21 @@ jobs:
         run: |
               source venv/bin/activate
               pip install -r ./requirements.txt
-              pip install robotframework-seleniumlibrary==4.25.0
+              pip install --upgrade robotframework-seleniumlibrary
+              
+      - name: Install Google Chrome
+        run: |
+          sudo apt update
+          sudo apt install -y wget
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
-      - name: Run test
-        run:  
-          robot ./Specs
+      - name: Install Chrome and ChromeDriver
+        run: |
+          sudo apt-get install -y chromium-browser
+          sudo apt-get install -y chromium-chromedriver
+          sudo cp /usr/bin/chromedriver /usr/local/bin  # garantir que o ChromeDriver esteja no PATH 
+               
       - name: Instalação Selenium library
         run: 
           pip install robotframework-seleniumlibrary
