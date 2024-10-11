@@ -37,6 +37,9 @@ jobs:
         
       - name: Instalar dependencias
         run:  pip install -r ./requirements.txt
+      - name: Run test
+        run:  
+          robot ./tests
           
       - name: Executar Testes de Frontend do Robot
         run: |
