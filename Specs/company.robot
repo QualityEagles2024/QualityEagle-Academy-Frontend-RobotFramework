@@ -6,7 +6,7 @@ Variables   ../Page/Mocks/company_variables.py
 Resource  ${EXECDIR}/Page/login.robot
 Resource  ${EXECDIR}/Page/menus.robot
 Resource  ${EXECDIR}/Page/company.robot
-Suite Setup  Open Browser  about:blank  Google Chrome  options=add_argument("disable-search-engine-choice-screen")
+Suite Setup  Open Browser  browser=headlesschrome
 Suite Teardown  Close Browser
 #Test Setup     Abrir o navegador - serve para abrir teste isolado
 #Test Teardown  Fechar o navegador - srve para finalizar caso de teste isolado
