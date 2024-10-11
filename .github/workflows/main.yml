@@ -18,6 +18,10 @@ jobs:
 
       - name: Listar Arquivos e Pastas
         run: ls -R
+        
+      - uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 129
 
       - name: Instalação da versão 3.13 do Python
         uses: actions/setup-python@v5
