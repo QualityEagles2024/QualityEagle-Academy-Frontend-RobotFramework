@@ -40,10 +40,7 @@ jobs:
               source venv/bin/activate
               pip install -r ./requirements.txt
               pip install robotframework-seleniumlibrary==4.2.0
-
-      - name: Run test
-        run:  
-          robot /Specs
+          
       - name: Instalação Selenium library
         run: 
           pip install robotframework-seleniumlibrary
