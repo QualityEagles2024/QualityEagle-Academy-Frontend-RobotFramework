@@ -2,16 +2,16 @@
 Documentation  Essa Suite testa Pesquisa de Usuario cadastrado
 Library  SeleniumLibrary
 Library  Collections
+Variables   ../Page/Mocks/login_variables.py
 Resource  ${EXECDIR}/Page/login.robot
 Resource  ${EXECDIR}/Page/menus.robot
 Resource  ${EXECDIR}/Page/user_search_user.robot
-Suite Setup     Open Browser  browser=headlesschrome
+# Suite Setup     Open Browser  browser=headlesschrome
+Suite Setup     Open Browser    about:blank     Google Chrome    options=add_argument("disable-search-engine-choice-screen")
 Suite Teardown  Close Browser
 
 *** Variables ***
-${url}=     https://automacao.qacoders-academy.com.br/login
-${BROWSER}    Chrome
-
+${BROWSER}        Google Chrome
 
 *** Test Cases ***
 CT01 - Pesquisa Usuario Cadastrado
@@ -23,13 +23,13 @@ CT01 - Pesquisa Usuario Cadastrado
 
 *** Keywords ***
 Fazer Login
-    # LOGIN #
-    Go To  ${url}
+    #LOGIN#
+    Go To  ${PreencheLogin['url']}
     Wait Until Element Is Visible   ${login.txtEmailUser}   2s
     Click Element  ${login.txtEmailUser}
-    Input Text   ${login.txtEmailUser}    ${preencherLogin.txtEmailUser}
+    Input Text   ${login.txtEmailUser}    ${PreencheLogin['email']}
     Click Element  ${login.txtSenha}
-    Input Text  ${login.txtSenha}     ${preencherLogin.txtSenha}
+    Input Text  ${login.txtSenha}     ${PreencheLogin['password']}
     Click Element  ${login.btnEntrar}
     Wait Until Element Is Visible   ${menu.mnuCadastros}   2s
 

@@ -10,7 +10,7 @@ Suite Setup     Open Browser  browser=headlesschrome
 Suite Teardown  Close Browser
 
 *** Variables ***
-${BROWSER}        Google Chrome	
+${BROWSER}        Google Chrome
 
 *** Test Cases ***
 CT01 - Criar novo usuario com sucesso
