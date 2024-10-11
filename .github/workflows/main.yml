@@ -22,6 +22,7 @@ jobs:
       - uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: 129
+          install-chromedriver: true
 
       - name: Instalação da versão 3.13 do Python
         uses: actions/setup-python@v5
@@ -45,18 +46,18 @@ jobs:
               pip install -r ./requirements.txt
               pip install --upgrade robotframework-seleniumlibrary
               
-      - name: Install Google Chrome
-        run: |
-          sudo apt update
-          sudo apt install -y wget
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install -y ./google-chrome-stable_current_amd64.deb
+      # - name: Install Google Chrome
+      #   run: |
+      #     sudo apt update
+      #     sudo apt install -y wget
+      #     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      #     sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
-      - name: Install Chrome and ChromeDriver
-        run: |
-          sudo apt-get install -y chromium-browser
-          sudo apt-get install -y chromium-chromedriver
-          sudo cp /usr/bin/chromedriver /usr/local/bin  # garantir que o ChromeDriver esteja no PATH 
+      # - name: Install Chrome and ChromeDriver
+      #   run: |
+      #     sudo apt-get install -y chromium-browser
+      #     sudo apt-get install -y chromium-chromedriver
+      #     sudo cp /usr/bin/chromedriver /usr/local/bin  # garantir que o ChromeDriver esteja no PATH 
                
       - name: Instalação Selenium library
         run: 
@@ -84,6 +85,3 @@ jobs:
       - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-
-  
