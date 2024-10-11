@@ -40,7 +40,12 @@ jobs:
               source venv/bin/activate
               pip install -r ./requirements.txt
               pip install robotframework-seleniumlibrary==4.2.0
-          
+              
+      - name: Install ChromeDriver
+        run: |
+          sudo apt-get install -y chromium-chromedriver
+          sudo cp /usr/bin/chromedriver /usr/local/bin 
+               
       - name: Instalação Selenium library
         run: 
           pip install robotframework-seleniumlibrary
