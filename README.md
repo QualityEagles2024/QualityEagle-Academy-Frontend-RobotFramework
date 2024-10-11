@@ -60,5 +60,5 @@ QualityEagle-Academy-Frontend-RobotFramework/
 robot -d ./reports Specs/nome da pasta
 
 ## Licença
-Desenvolvido por Kathleen Caroline Coutinho Benedicto
+Este projeto é distribuído sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.
 
