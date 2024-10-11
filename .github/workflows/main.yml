@@ -37,11 +37,17 @@ jobs:
         
       - name: Instalar dependencias
         run:  pip install -r ./requirements.txt
+      - name: Run test
+        run:  
+          robot ./Specs
+      - name: Instalação Selenium library
+        run: 
+          pip install robotframework-seleniumlibrary
           
       - name: Executar Testes de Frontend do Robot
         run: |
           source venv/bin/activate
-          robot --outputdir results/ tests/
+          robot --outputdir results/ Specs/
 
       - name: Salvar o Report dos Testes
         uses: actions/upload-artifact@v4
