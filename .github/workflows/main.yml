@@ -39,7 +39,7 @@ jobs:
         run: |
               source venv/bin/activate
               pip install -r ./requirements.txt
-              pip install robotframework-seleniumlibrary==4.25.0
+              pip install robotframework-seleniumlibrary==6.6.1
 
       - name: Run test
         run:  
