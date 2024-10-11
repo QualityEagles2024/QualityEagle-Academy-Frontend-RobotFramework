@@ -43,7 +43,7 @@ jobs:
 
       - name: Run test
         run:  
-          robot ./Specs
+          robot /Specs
       - name: Instalação Selenium library
         run: 
           pip install robotframework-seleniumlibrary
