@@ -24,30 +24,30 @@ CT01 - Criar novo usuario com sucesso
 Fazer Login
     #LOGIN#
     Go To  ${PreencheLogin['url']}
-    Wait Until Element Is Visible   ${login.txtEmailUser}   30
+    Wait Until Element Is Visible   ${login.txtEmailUser}   2s
     Click Element  ${login.txtEmailUser}
     Input Text   ${login.txtEmailUser}    ${PreencheLogin['email']}
     Click Element  ${login.txtSenha}
     Input Text  ${login.txtSenha}     ${PreencheLogin['password']}
     Click Element  ${login.btnEntrar}
-    Wait Until Element Is Visible   ${menu.mnuCadastros}   30
+    Wait Until Element Is Visible   ${menu.mnuCadastros}   2s
 
 Entrar no menu Usuarios
     # PAGINA USUARIO #
-    Wait Until Element Is Visible   ${menu.mnuCadastros}    30
+    Wait Until Element Is Visible   ${menu.mnuCadastros}    2s
     Click Element  ${menu.mnuCadastros}
-    Wait Until Element Is Visible   ${menu.mnuUsuarios}     30
+    Wait Until Element Is Visible   ${menu.mnuUsuarios}     2s
     Click Element  ${menu.mnuUsuarios}
-    Wait Until Element Is Visible   ${user.btnNovoCadastro}     30
+    Wait Until Element Is Visible   ${user.btnNovoCadastro}     2s
 
 Clicar no botao Editar
     # PAGINA USUARIO #
-    Wait Until Element Is Visible   ${user.btnEditar}    30
+    Wait Until Element Is Visible   ${user.btnEditar}    2s
     Click Element  ${user.btnEditar}
 
 Editar cadastro
     #Alteração do Usuario
-    Wait Until Element Is Visible   ${user.txtNomeCompleto}    30
+    Wait Until Element Is Visible   ${user.txtNomeCompleto}    2s
     Sleep    2s
     Clear Element Text    ${user.txtNomeCompleto}
     Input Text  ${user.txtNomeCompleto}  ${PreencheUsuario['nome_completo']}
@@ -55,4 +55,4 @@ Editar cadastro
     Input Text  ${user.txtEmail}  ${PreencheUsuario['email']}
     Scroll Element Into View  ${user.btnSalvarNovo}
     Click Element  ${user.btnSalvarNovo}
-    Sleep    3s
+    Sleep    2s

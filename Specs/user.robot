@@ -23,21 +23,21 @@ CT01 - Criar novo usuario com sucesso
 Fazer Login
     #LOGIN#
     Go To  ${PreencheLogin['url']}
-    Wait Until Element Is Visible   ${login.txtEmailUser}   30
+    Wait Until Element Is Visible   ${login.txtEmailUser}   2s
     Click Element  ${login.txtEmailUser}
     Input Text   ${login.txtEmailUser}    ${PreencheLogin['email']}
     Click Element  ${login.txtSenha}
     Input Text  ${login.txtSenha}     ${PreencheLogin['password']}
     Click Element  ${login.btnEntrar}
-    Wait Until Element Is Visible   ${menu.mnuCadastros}   30
+    Wait Until Element Is Visible   ${menu.mnuCadastros}   2s
 
 Entrar no menu Usuarios e clicar em novo cadastro
     # PAGINA USUARIO #
-    Wait Until Element Is Visible   ${menu.mnuCadastros}    30
+    Wait Until Element Is Visible   ${menu.mnuCadastros}    2s
     Click Element  ${menu.mnuCadastros}
-    Wait Until Element Is Visible   ${menu.mnuUsuarios}     30
+    Wait Until Element Is Visible   ${menu.mnuUsuarios}     2s
     Click Element  ${menu.mnuUsuarios}
-    Wait Until Element Is Visible   ${user.btnNovoCadastro}     30
+    Wait Until Element Is Visible   ${user.btnNovoCadastro}     2s
     Click Element  ${user.btnNovoCadastro}
     Wait Until Element Is Visible   ${user.txtNomeCompleto}
 

@@ -15,4 +15,4 @@ LoginAdmin
     Click Element  ${login.txtSenha}
     Input Text  ${login.txtSenha}     ${preencherLogin.txtSenha}
     Click Element  ${login.btnEntrar}
-    Wait Until Element Is Visible   ${company.btnCadastros}   30
+    Wait Until Element Is Visible   ${company.btnCadastros}   2s

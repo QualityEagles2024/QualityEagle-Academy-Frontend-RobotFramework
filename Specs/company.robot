@@ -30,22 +30,22 @@ CT02 - Criar Novo Cadastro Company
 Fazer Login
     #LOGIN#
     Go To  ${PreencheLogin['url']}
-    Wait Until Element Is Visible   ${login.txtEmailUser}   30
+    Wait Until Element Is Visible   ${login.txtEmailUser}   2s
     Click Element  ${login.txtEmailUser}
     Input Text   ${login.txtEmailUser}    ${PreencheLogin['email']}
     Click Element  ${login.txtSenha}
     Input Text  ${login.txtSenha}     ${PreencheLogin['password']}
     Click Element  ${login.btnEntrar}
-    Wait Until Element Is Visible   ${menu.mnuCadastros}   30
+    Wait Until Element Is Visible   ${menu.mnuCadastros}   2s
 
 Entrar no menu Empresa e clicar em novo cadastro
     # PAGINA EMPRESA #
     Click Element  ${menu.mnuCadastros}
-    Wait Until Element Is Visible   ${menu.mnuEmpresa}   30
+    Wait Until Element Is Visible   ${menu.mnuEmpresa}   2s
     Click Element  ${menu.mnuEmpresa}
-    Wait Until Element Is Visible   ${company.btnNovoCadastro}   30
+    Wait Until Element Is Visible   ${company.btnNovoCadastro}   2s
     Click Element  ${company.btnNovoCadastro}
-    Wait Until Element Is Visible   ${company.txtRazaoSocial}   30
+    Wait Until Element Is Visible   ${company.txtRazaoSocial}   2s
 
 Preencher nova Empresa
     #Preenchimento Formulario Nova Empresa
