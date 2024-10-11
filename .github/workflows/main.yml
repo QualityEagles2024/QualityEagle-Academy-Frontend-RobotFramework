@@ -39,12 +39,12 @@ jobs:
         run:  pip install -r ./requirements.txt
       - name: Run test
         run:  
-          robot ./tests
+          robot ./Specs
           
       - name: Executar Testes de Frontend do Robot
         run: |
           source venv/bin/activate
-          robot --outputdir results/ tests/
+          robot --outputdir results/ Specs/
 
       - name: Salvar o Report dos Testes
         uses: actions/upload-artifact@v4
