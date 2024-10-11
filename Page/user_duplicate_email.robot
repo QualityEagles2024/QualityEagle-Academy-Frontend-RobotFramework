@@ -14,7 +14,7 @@ Library     SeleniumLibrary
 ...     txtSenha=//*[@id="password"]
 ...     txtConfirmeaSuaSenha=//*[@id="confirmPassword"]
 ...     btnSalvarNovo=//*[@id="save"]
-...     lblAlert=/html/body/div/div/div[2]/div/form/div[1]
+...     lblAlertCpfJaExiste=//div[@class='MuiAlert-message css-1xsto0d'][contains(.,'O cpf informado já existe em nossa base de dados.')]
 
 &{preencherFormulario}
 ...     txtNomeCompleto=Joana de Assis
@@ -23,7 +23,7 @@ Library     SeleniumLibrary
 ...     txtCPF=56959878920
 ...     txtSenha=Tecnologia1@
 ...     txtConfirmeaSuaSenha=Tecnologia1@
-...     lblAlertEmailJaInformado=E-mail já cadastrado.
+...     lblAlertCpfJaExiste=O cpf informado já existe em nossa base de dados.
 
 &{NaveguePelaLista}
 ...     btnAvancar1=//button[contains(@class, 'css-kab9pu')]

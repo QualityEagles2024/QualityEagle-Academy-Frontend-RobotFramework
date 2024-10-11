@@ -2,10 +2,12 @@
 Documentation  Essa Suite testa novo cadastro Usuario com Email já cadastrado
 Library  SeleniumLibrary
 Library  Collections
+Variables   ../Page/Mocks/login_variables.py
 Resource  ${EXECDIR}/Page/login.robot
 Resource  ${EXECDIR}/Page/menus.robot
 Resource  ${EXECDIR}/Page/user_duplicate_email.robot
-Suite Setup     Open Browser  browser=headlesschrome
+Suite Setup     Open Browser    about:blank     Google Chrome    options=add_argument("disable-search-engine-choice-screen")
+# Suite Setup     Open Browser  browser=headlesschrome
 Suite Teardown  Close Browser
 
 *** Variables ***
@@ -16,24 +18,21 @@ ${BROWSER}        Google Chrome
 CT01 - Criar usuario em duplicidade
     [Tags]    CT01
     Fazer Login
-    Entrar no menu Usuarios e clicar em novo cadastro
+    Entrar no menu Usuarios
     Clicar no botao Novo Cadastro
     Preencher novo cadastro
     Salvar Cadastro
-    Clicar no botao Novo Cadastro
-    Preencher novo cadastro 
-    Salvar Cadastro
-    Verificar Mensagem Usuario Email Informado
+    Verificar Mensagem Usuario Cpf Informado
 
 *** Keywords ***
 Fazer Login
-    # LOGIN #
-    Go To  ${url}
+    #LOGIN#
+    Go To  ${PreencheLogin['url']}
     Wait Until Element Is Visible   ${login.txtEmailUser}   2s
     Click Element  ${login.txtEmailUser}
-    Input Text   ${login.txtEmailUser}    ${preencherLogin.txtEmailUser}
+    Input Text   ${login.txtEmailUser}    ${PreencheLogin['email']}
     Click Element  ${login.txtSenha}
-    Input Text  ${login.txtSenha}     ${preencherLogin.txtSenha}
+    Input Text  ${login.txtSenha}     ${PreencheLogin['password']}
     Click Element  ${login.btnEntrar}
     Wait Until Element Is Visible   ${menu.mnuCadastros}   2s
 
@@ -63,8 +62,8 @@ Salvar Cadastro
     Click Element  ${user.btnSalvarNovo}
 
 Verificar Mensagem Usuario Cpf Informado
-    Wait Until Element Is Visible   ${user.lblAlert}     2s
-    ${mensagem}=    Get Text    ${user.lblAlert}
-    Should Be Equal As Strings    ${mensagem}    ${preencherFormulario.lblAlertEmailJaCadastrado}
+    Wait Until Element Is Visible   ${user.lblAlertCpfJaExiste}     2s
+    ${mensagem}=    Get Text    ${user.lblAlertCpfJaExiste}
+    Should Be Equal As Strings    ${mensagem}    ${preencherFormulario.lblAlertCpfJaExiste}
     Sleep    2s
-    Close Browser
+    # Close Browser
