@@ -37,9 +37,7 @@ jobs:
         
       - name: Instalar dependencias
         run:  pip install -r ./requirements.txt
-        
-requirements.txt:
-robotframework-seleniumlibrary==4.25.0
+              pip install robotframework-seleniumlibrary==4.25.0
 
       - name: Run test
         run:  
