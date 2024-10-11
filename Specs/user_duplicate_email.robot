@@ -9,7 +9,7 @@ Suite Setup     Open Browser  browser=headlesschrome
 Suite Teardown  Close Browser
 
 *** Variables ***
-${url}=     https://automacao.qacoders-academy.com.br/login
+${url}=     https://automacao.qacoders.dev.br/login
 ${BROWSER}        Google Chrome	
 
 *** Test Cases ***
