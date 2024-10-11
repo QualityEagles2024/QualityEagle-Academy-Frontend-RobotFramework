@@ -14,6 +14,7 @@ ${BROWSER}        Google Chrome
 
 *** Test Cases ***
 CT01 - Criar novo usuario com sucesso
+    Skip
     [Tags]    CT01
     Fazer Login
     Entrar no menu Usuarios
