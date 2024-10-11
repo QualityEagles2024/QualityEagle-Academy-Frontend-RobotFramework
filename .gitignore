@@ -35,3 +35,5 @@ node_modules
 .parcel-cache/
 .vs/
 Reports/
+Specs/user_duplicate.robot
+Page/user_duplicate.robot

@@ -1,4 +1,4 @@
-*** Settings ***
+##*** Settings ***
 Documentation  Essa Suite testa Usuario em Duplicidade
 Library  SeleniumLibrary
 Library  Collections
@@ -8,11 +8,11 @@ Resource  ${EXECDIR}/Page/user_duplicate.robot
 Suite Setup     Open Browser  browser=headlesschrome
 Suite Teardown  Close Browser
 
-*** Variables ***
-${url}=     https://automacao.qacoders-academy.com.br/login
-${BROWSER}        Google Chrome	
+##*** Variables ***
+##${url}=     https://automacao.qacoders.dev.br/login
+##${BROWSER}        Google Chrome	
 
-*** Test Cases ***
+##*** Test Cases ***
 CT01 - Criar usuario em duplicidade
     [Tags]    CT01
     Fazer Login
@@ -25,7 +25,7 @@ CT01 - Criar usuario em duplicidade
     Salvar Cadastro
     Verificar Mensagem Usuario Cpf Informado
 
-*** Keywords ***
+#*** Keywords ***
 Fazer Login
     # LOGIN #
     Go To  ${url}

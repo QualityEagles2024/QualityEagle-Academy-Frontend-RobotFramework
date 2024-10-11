@@ -1,11 +1,11 @@
-*** Settings ***
+#*** Settings ***
 
 Library     SeleniumLibrary
 
 
-*** Variables ***
+#*** Variables ***
 
-&{user}
+#&{user}
 ...     btnNovoCadastro=//*[@id="Novo Cadastro"]
 ...     txtNomeCompleto=//*[@id="fullName"]
 ...     txtEmail=//*[@id="mail"]
@@ -16,7 +16,7 @@ Library     SeleniumLibrary
 ...     btnSalvarNovo=//*[@id="save"]
 ...     lblAlert=//html/body/div/div/div[2]/div/form/div[1]/div[2]
 
-&{preencherFormulario}
+#&{preencherFormulario}
 ...     txtNomeCompleto=Joana de Assis
 ...     txtEmail=joana.a9@gmail.com
 ...     txtPerfilDeAcesso=ADMIN
@@ -25,5 +25,5 @@ Library     SeleniumLibrary
 ...     txtConfirmeaSuaSenha=Tecnologia1@
 ...     lblAlertCpfJaInformado=O cpf informado já existe em nossa base de dados.
 
-&{NaveguePelaLista}
+#&{NaveguePelaLista}
 ...     btnAvancar1=//button[contains(@class, 'css-kab9pu')]
