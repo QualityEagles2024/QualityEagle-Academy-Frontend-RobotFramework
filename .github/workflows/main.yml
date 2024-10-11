@@ -11,7 +11,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: https://github.com/QualityEagles2024/QualityEagles-Academy-RobotFramework-RobotFramework.git
+      url: https://github.com/QualityEagles2024/QualityEagles-Academy-Frontend-RobotFramework.git
     steps:
       - name: Clonando para o repositório na máquina virtual
         uses: actions/checkout@v4
@@ -27,10 +27,21 @@ jobs:
       - name: Instalação da Faker library
         run: |
           pip install Faker
-
+          
+      - name: Criar Ambiente Virtual (venv)
+        run: python -m venv venv
+        
+      - name: Activate virtual environment
+        run: |
+          source venv/bin/activate  
+        
+      - name: Instalar dependencias
+        run:  pip install -r requirements.txt
+          
       - name: Executar Testes de Frontend do Robot
         run: |
-           robot --outputdir results/ tests/
+          source venv/bin/activate
+          robot --outputdir results/ tests/
 
       - name: Salvar o Report dos Testes
         uses: actions/upload-artifact@v4
@@ -49,5 +60,6 @@ jobs:
       - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
   
